@@ -6,7 +6,7 @@ using RostelecomTask.Core.Domain.Entities;
 
 namespace RostelecomTask.Core.Services
 {
-    interface IUserService
+   public interface IUserService
     {
         Task<User> GetUserById(long id);
         Task<IEnumerable<User>> GetUsersByDepId(int depId);

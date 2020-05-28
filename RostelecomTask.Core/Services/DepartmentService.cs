@@ -7,7 +7,7 @@ using RostelecomTask.Core.Domain.Interfaces;
 
 namespace RostelecomTask.Core.Services
 {
-    class DepartmentService : IDepartmentService
+   public class DepartmentService : IDepartmentService
     {
         private readonly IUnitOfWork _unitOfWork;
 

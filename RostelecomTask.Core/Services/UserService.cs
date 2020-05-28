@@ -7,7 +7,7 @@ using RostelecomTask.Core.Domain.Interfaces;
 
 namespace RostelecomTask.Core.Services
 {
-    class UserService : IUserService
+   public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
 

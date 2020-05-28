@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Tests", "Ros
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Infrastructure", "RostelecomTask.Infrastructure\RostelecomTask.Infrastructure.csproj", "{72C70989-9593-4D8F-9EBD-685D86EA1BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Api", "RostelecomTask.Api\RostelecomTask.Api.csproj", "{B7DFF40F-E8D9-4D8E-9F1C-13173C2C276D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Api", "RostelecomTask.Api\RostelecomTask.Api.csproj", "{9943BDD3-B794-4FD9-91E9-9E30646DF140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7DFF40F-E8D9-4D8E-9F1C-13173C2C276D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7DFF40F-E8D9-4D8E-9F1C-13173C2C276D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7DFF40F-E8D9-4D8E-9F1C-13173C2C276D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7DFF40F-E8D9-4D8E-9F1C-13173C2C276D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9943BDD3-B794-4FD9-91E9-9E30646DF140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9943BDD3-B794-4FD9-91E9-9E30646DF140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9943BDD3-B794-4FD9-91E9-9E30646DF140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9943BDD3-B794-4FD9-91E9-9E30646DF140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
