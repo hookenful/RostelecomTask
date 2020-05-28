@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Core", "RostelecomTask.Core\RostelecomTask.Core.csproj", "{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Tests", "RostelecomTask.Tests\RostelecomTask.Tests.csproj", "{F81207E7-3833-4338-AAF8-9271B5D21B7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCAD5411-AE89-4F74-8674-E9656F132A6F}
+	EndGlobalSection
+EndGlobal
