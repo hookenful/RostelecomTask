@@ -8,7 +8,6 @@ namespace RostelecomTask.Core.Services
 {
     public interface IDepartmentService
     {
-        Task<IEnumerable<Department>> GetAllDepartments();
         Task<Department> GetDepartmentById(long id);
         Task<Department> CreateDepartment(Department department);
         Task UpdateDepartment(Department depToBeUpdated, Department department);

@@ -23,7 +23,9 @@ namespace RostelecomTask.Infrastructure.Repositories
 
         public Task<Department> GetWithUsersByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            return AppDbContext.Departments
+                .Include(a => a.Users)
+                .SingleOrDefaultAsync(a => a.Id == id);
         }
     }
 }
