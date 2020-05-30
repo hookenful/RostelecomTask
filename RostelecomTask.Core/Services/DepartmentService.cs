@@ -21,10 +21,17 @@ namespace RostelecomTask.Core.Services
             return await _unitOfWork.Departments.GetWithUsersByIdAsync(id);
         }
 
+        public async Task<IEnumerable<Department>> GetAllDeps()
+        {
+            return await _unitOfWork.Departments.GetAllWithUsersAsync();
+        }
+
         public async Task<Department> CreateDepartment(Department newDepartment)
         {
             await _unitOfWork.Departments.AddAsync(newDepartment);
+            await _unitOfWork.CommitAsync();
             return newDepartment;
+
         }
 
         public async Task UpdateDepartment(Department depToBeUpdated, Department department)

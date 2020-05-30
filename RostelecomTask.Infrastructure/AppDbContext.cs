@@ -34,17 +34,17 @@ namespace RostelecomTask.Infrastructure
                 .HasData(new Department
                     {
                         Id = 1, 
-                        Name = "IT"
+                        Name = "Production Department"
                     },
                     new Department
                     {
                         Id = 2,
-                        Name = "Legal"
+                        Name = "Finance Department"
                     },
                     new Department
                     {
                         Id = 3,
-                        Name = "Fix"
+                        Name = "IT Department"
                     });
 
             modelBuilder.Entity<User>()
@@ -53,21 +53,21 @@ namespace RostelecomTask.Infrastructure
                     Id = 1,
                     DepartmentId = 1,
                     UserName = "hoozr",
-                    FullName = "VV"
+                    FullName = "Vladislav Vershinin"
                 },
                     new User
                     {
                         Id = 2,
-                        DepartmentId = 1,
-                        UserName = "kkkk",
-                        FullName = "KK"
+                        DepartmentId = 2,
+                        UserName = "Alex Oxbrough",
+                        FullName = "oxbrough99"
                     },
                     new User
                     {
                         Id = 3,
                         DepartmentId = 3,
-                        UserName = "csharp_dev",
-                        FullName = "Test"
+                        UserName = "Courtney Gear",
+                        FullName = "tespa_member"
                     });
         }
     }

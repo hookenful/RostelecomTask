@@ -13,5 +13,6 @@ namespace RostelecomTask.Core.Services
         Task<User> CreateUser(User newUser);
         Task UpdateUser(User userToBeUpdated, User user);
         Task DeleteUser(User user);
+        Task<IEnumerable<User>> GetAllUsers();
     }
 }

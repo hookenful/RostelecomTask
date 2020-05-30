@@ -12,5 +12,6 @@ namespace RostelecomTask.Core.Services
         Task<Department> CreateDepartment(Department department);
         Task UpdateDepartment(Department depToBeUpdated, Department department);
         Task DeleteDepartment(Department department);
+        Task<IEnumerable<Department>> GetAllDeps();
     }
 }

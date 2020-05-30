@@ -56,7 +56,10 @@ namespace RostelecomTask.Api
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
-            services.AddControllers();
+            services.AddControllers()
+                .AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("RostelecomTest"));
             services.AddTransient<IUserService, UserService>();

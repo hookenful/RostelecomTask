@@ -15,6 +15,5 @@ namespace RostelecomTask.Core.Domain.Entities
 
         public ICollection<User> Users { get; set; }
 
-        public DateTime CreatedAt { get; set; }
     }
 }

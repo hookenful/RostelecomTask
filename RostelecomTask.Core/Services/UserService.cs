@@ -46,5 +46,10 @@ namespace RostelecomTask.Core.Services
             _unitOfWork.Users.Remove(user);
             await _unitOfWork.CommitAsync();
         }
+
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+           return await _unitOfWork.Users.GetAllWithDepsAsync();
+        }
     }
 }

@@ -22,10 +22,21 @@ namespace RostelecomTask.Api.Controllers
             _userService = userService;
             _mapper = mapper;
         }
+
+        [HttpGet("")]
+        public async Task<ActionResult<IEnumerable<UserResource>>> GetAllUsers()
+        {
+            var users = await _userService.GetAllUsers();
+            var userResources = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
+
+            return Ok(userResources);
+        }
         [HttpGet("{id}")]
         public async Task<ActionResult<UserResource>> GetUserById(long id)
         {
             var user = await _userService.GetUserById(id);
+
+            if (user == null) return NotFound();
 
             var userResource = _mapper.Map<User, UserResource>(user);
             return Ok(userResource);
@@ -49,9 +60,40 @@ namespace RostelecomTask.Api.Controllers
             var userResource = _mapper.Map<User, UserResource>(user);
 
             return Ok(userResource);
+        }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UserResource>> UpdateArtist(int id, [FromBody] SaveUserResource model)
+        {
+            var validator = new SaveUserResourceValidator();
+            var validationResult = await validator.ValidateAsync(model);
 
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
 
+            var userToBeUpdated = await _userService.GetUserById(id);
+
+            if (userToBeUpdated == null)
+                return NotFound();
+
+            var user = _mapper.Map<SaveUserResource, User>(model);
+
+            await _userService.UpdateUser(userToBeUpdated, user);
+
+            var updatedUser = await _userService.GetUserById(id);
+
+            var updatedUserResource = _mapper.Map<User, UserResource>(updatedUser);
+
+            return Ok(updatedUserResource);
         }
 
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var user = await _userService.GetUserById(id);
+
+            await _userService.DeleteUser(user);
+
+            return NoContent();
+        }
     }
 }

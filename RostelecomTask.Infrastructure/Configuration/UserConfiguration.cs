@@ -26,6 +26,7 @@ namespace RostelecomTask.Infrastructure.Configuration
             builder
                 .HasOne(m => m.Department)
                 .WithMany(m => m.Users)
+                .OnDelete(DeleteBehavior.SetNull)
                 .HasForeignKey(m => m.DepartmentId);
 
             builder
