@@ -8,6 +8,7 @@ namespace RostelecomTask.Api.Resources
 {
     public class SaveDepartmentResource
     {
+        public long Id { get; set; }
         public string Name { get; set; }
     }
 }

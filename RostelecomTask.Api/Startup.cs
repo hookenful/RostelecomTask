@@ -35,7 +35,8 @@ namespace RostelecomTask.Api
 
             app.Use(async (context, next) =>
             {
-                context.Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+                context.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+                context.Response.Headers.Add("Access-Control-Allow-Methods", "*");
                 await next.Invoke();
             });
             app.UseSwagger();
