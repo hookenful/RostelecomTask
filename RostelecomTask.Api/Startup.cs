@@ -23,6 +23,7 @@ namespace RostelecomTask.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             RegisterServices(services);
         }
 
@@ -31,6 +32,12 @@ namespace RostelecomTask.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+                await next.Invoke();
+            });
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
@@ -46,7 +53,7 @@ namespace RostelecomTask.Api
 
             app.UseRouting();
 
-            
+            app.UseCors(p=>p.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {

@@ -20,7 +20,7 @@ namespace RostelecomTask.Core.Services
             return await _unitOfWork.Users.GetWithDepByIdAsync(id);
         }
 
-        public async Task<IEnumerable<User>> GetUsersByDepId(int depId)
+        public async Task<IEnumerable<User>> GetUsersByDepId(long depId)
         {
             return await _unitOfWork.Users.GetAllWithDepsByDepIdAsync(depId);
         }

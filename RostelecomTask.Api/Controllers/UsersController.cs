@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,22 +24,15 @@ namespace RostelecomTask.Api.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("")]
-        public async Task<ActionResult<IEnumerable<UserResource>>> GetAllUsers()
-        {
-            var users = await _userService.GetAllUsers();
-            var userResources = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
-
-            return Ok(userResources);
-        }
+     
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserResource>> GetUserById(long id)
+        public async Task<ActionResult<UserResource>> GetUsersByDepId(long depId)
         {
-            var user = await _userService.GetUserById(id);
+            var users = await _userService.GetUsersByDepId(depId);
 
-            if (user == null) return NotFound();
+            if (users == null) return NotFound();
 
-            var userResource = _mapper.Map<User, UserResource>(user);
+            var userResource = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
             return Ok(userResource);
         }
 
@@ -59,7 +53,7 @@ namespace RostelecomTask.Api.Controllers
 
             var userResource = _mapper.Map<User, UserResource>(user);
 
-            return Ok(userResource);
+            return Ok();
         }
         [HttpPut("{id}")]
         public async Task<ActionResult<UserResource>> UpdateUser(int id, [FromBody] SaveUserResource model)
@@ -83,7 +77,7 @@ namespace RostelecomTask.Api.Controllers
 
             var updatedUserResource = _mapper.Map<User, UserResource>(updatedUser);
 
-            return Ok(updatedUserResource);
+            return Ok("Updated successfully!");
         }
 
         [HttpDelete("{id}")]
@@ -94,6 +88,15 @@ namespace RostelecomTask.Api.Controllers
             await _userService.DeleteUser(user);
 
             return NoContent();
+        }
+
+        [HttpGet("")]
+        public async Task<ActionResult<IEnumerable<UserResource>>> GetAllUsers()
+        {
+            var users = await _userService.GetAllUsers();
+            var userResources = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
+
+            return Ok(userResources);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RostelecomTask.Core.Services
    public interface IUserService
     {
         Task<User> GetUserById(long id);
-        Task<IEnumerable<User>> GetUsersByDepId(int depId);
+        Task<IEnumerable<User>> GetUsersByDepId(long depId);
         Task<User> CreateUser(User newUser);
         Task UpdateUser(User userToBeUpdated, User user);
         Task DeleteUser(User user);
