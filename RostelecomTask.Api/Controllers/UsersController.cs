@@ -62,13 +62,13 @@ namespace RostelecomTask.Api.Controllers
             return Ok(userResource);
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult<UserResource>> UpdateArtist(int id, [FromBody] SaveUserResource model)
+        public async Task<ActionResult<UserResource>> UpdateUser(int id, [FromBody] SaveUserResource model)
         {
             var validator = new SaveUserResourceValidator();
             var validationResult = await validator.ValidateAsync(model);
 
             if (!validationResult.IsValid)
-                return BadRequest(validationResult.Errors); // this needs refining, but for demo it is ok
+                return BadRequest(validationResult.Errors);
 
             var userToBeUpdated = await _userService.GetUserById(id);
 

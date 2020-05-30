@@ -60,9 +60,9 @@ namespace RostelecomTask.Api.Controllers
 
             var department = await _departmentService.GetDepartmentById(newDepartment.Id);
 
-            var artistResource = _mapper.Map<Department, DepartmentResource>(department);
+            var departmentResource = _mapper.Map<Department, DepartmentResource>(department);
 
-            return Ok(department);
+            return Ok(departmentResource);
         }
 
         [HttpPut("{id}")]

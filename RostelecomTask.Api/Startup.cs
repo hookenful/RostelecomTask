@@ -35,7 +35,7 @@ namespace RostelecomTask.Api
 
             app.UseSwaggerUI(c =>
             {
-                c.RoutePrefix = "";
+                c.RoutePrefix = "swagger";
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "RostelecomTask V1");
             });
 
