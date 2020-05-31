@@ -77,7 +77,7 @@ namespace RostelecomTask.Api.Controllers
 
             var updatedUserResource = _mapper.Map<User, UserResource>(updatedUser);
 
-            return Ok("Updated successfully!");
+            return Ok();
         }
 
         [HttpDelete("{id}")]

@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RostelecomTask.Core\RostelecomTask.Core.csproj" />
+    <ProjectReference Include="..\RostelecomTask.Infrastructure\RostelecomTask.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

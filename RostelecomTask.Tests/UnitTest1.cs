@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Moq;
 using RostelecomTask.Core.Domain.Entities;
 using RostelecomTask.Core.Services;
+using RostelecomTask.Infrastructure;
 using Xunit;
 
 namespace RostelecomTask.Tests
@@ -29,10 +30,10 @@ namespace RostelecomTask.Tests
         }
 
         [Fact]
-        public void Can_Add_New_User()
+        public void GetByIdAsync_Returns_Department()
         {
             
-
+            var dbContextMock = new Mock<AppDbContext>();
 
         }
     }

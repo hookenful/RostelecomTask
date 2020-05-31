@@ -65,18 +65,18 @@ namespace RostelecomTask.Api.Controllers
             return Ok(departmentResource);
         }
 
-        [HttpPut("")]
-        public async Task<ActionResult<DepartmentResource>> UpdateDepartment([FromBody] SaveDepartmentResource model)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<DepartmentResource>> UpdateDepartment(long id, [FromBody] SaveDepartmentResource model)
         {
             var validator = new SaveDepartmentResourceValidator();
             var validationResult = await validator.ValidateAsync(model);
 
-            var requestIsInvalid = model.Id == 0 || !validationResult.IsValid;
+            var requestIsInvalid = id == 0 || !validationResult.IsValid;
 
             if (requestIsInvalid)
                 return BadRequest(validationResult.Errors); 
 
-            var depToBeUpdate = await _departmentService.GetDepartmentById(model.Id);
+            var depToBeUpdate = await _departmentService.GetDepartmentById(id);
 
             if (depToBeUpdate == null)
                 return NotFound();
@@ -85,7 +85,7 @@ namespace RostelecomTask.Api.Controllers
 
             await _departmentService.UpdateDepartment(depToBeUpdate, department);
 
-            var updatedDep = await _departmentService.GetDepartmentById(model.Id);
+            var updatedDep = await _departmentService.GetDepartmentById(id);
             var updatedDepartmentResource = _mapper.Map<Department, DepartmentResource>(updatedDep);
 
             return Ok(updatedDepartmentResource);

@@ -59,15 +59,15 @@ namespace RostelecomTask.Infrastructure
                     {
                         Id = 2,
                         DepartmentId = 2,
-                        UserName = "Alex Oxbrough",
-                        FullName = "oxbrough99"
+                        UserName = "oxbrough99",
+                        FullName = "Alex Oxbrough"
                     },
                     new User
                     {
                         Id = 3,
                         DepartmentId = 3,
-                        UserName = "Courtney Gear",
-                        FullName = "tespa_member"
+                        UserName = "tespa_member",
+                        FullName = "Courtney Gear"
                     });
         }
     }

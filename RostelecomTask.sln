@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Core", "RostelecomTask.Core\RostelecomTask.Core.csproj", "{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RostelecomTask.Core", "RostelecomTask.Core\RostelecomTask.Core.csproj", "{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Tests", "RostelecomTask.Tests\RostelecomTask.Tests.csproj", "{F81207E7-3833-4338-AAF8-9271B5D21B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RostelecomTask.Infrastructure", "RostelecomTask.Infrastructure\RostelecomTask.Infrastructure.csproj", "{72C70989-9593-4D8F-9EBD-685D86EA1BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Infrastructure", "RostelecomTask.Infrastructure\RostelecomTask.Infrastructure.csproj", "{72C70989-9593-4D8F-9EBD-685D86EA1BC0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RostelecomTask.Api", "RostelecomTask.Api\RostelecomTask.Api.csproj", "{9943BDD3-B794-4FD9-91E9-9E30646DF140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RostelecomTask.Api", "RostelecomTask.Api\RostelecomTask.Api.csproj", "{9943BDD3-B794-4FD9-91E9-9E30646DF140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A8F563-FCF9-48E0-BC0E-FB9D497865EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F81207E7-3833-4338-AAF8-9271B5D21B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C70989-9593-4D8F-9EBD-685D86EA1BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
